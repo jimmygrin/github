@@ -1,13 +1,32 @@
 import React from "react"
 import { Provider } from "react-redux"
-import store from "../store"
+import store from "../redux/store"
+import { useGithub } from '../redux/ducks/github'
+import User from './User'
+import Repos from './Repos'
 
-function App() {
+
+function Wrap() {
   return (
     <Provider store={store}>
-      <h1>Hello World</h1>
+      <App />
     </Provider>
   )
 }
 
-export default App
+
+function App() {
+
+  const { user, repos } = useGithub('jimmygrin')
+  
+  return (
+    
+      <div className="container">
+        <User {...user}/>
+        <Repos repos={repos}/>
+      </div>
+  
+  )
+}
+
+export default Wrap
