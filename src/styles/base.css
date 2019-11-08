@@ -33,6 +33,54 @@ code {
    
 }
 
+#topcontainer {
+  height: 75px;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#topmenu {
+ 
+  color: white;
+}
+
+#leftmenu {
+  display: flex;
+  justify-content: left;
+  color: white;
+  align-items: center;
+}
+#leftmenu p {
+  padding: 5px;
+}
+
+#leftmenu input {
+  width: 300px;
+  height: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#rightmenu{
+  display: flex;
+  justify-content: right;
+  color: white;
+  align-items: center;
+
+}
+
+#rightmenu i{
+  padding: 5px;
+}
+
+#rigntmenu img {
+  max-width: 5px;
+  max-height: 5px;
+}
+
 #main {
 
 width: 1200px;
@@ -81,4 +129,25 @@ li {
   text-align: center;
   border: solid 1px black;
   padding: 10px;
+  border-radius:2px;
+}
+
+.repo {
+  margin-left: 40px;
+  margin-top: 20px;
+
+}
+
+.user{
+  margin-top: 20px;
+
+}
+
+.fab fa-github {
+  
+}
+
+
+.fa fa-envelope{
+  padding-right: 20px;
 }
