@@ -4,6 +4,8 @@ import store from "../redux/store"
 import { useGithub } from '../redux/ducks/github'
 import User from './User'
 import Repos from './Repos'
+import Main from './Main'
+
 
 
 function Wrap() {
@@ -15,15 +17,21 @@ function Wrap() {
 }
 
 
+
 function App() {
 
   const { user, repos } = useGithub('jimmygrin')
   
   return (
-    
+     
       <div className="container">
+      
+      <div id="main">
+
         <User {...user}/>
-        <Repos repos={repos}/>
+        <Repos repos={repos} {...user} />
+      
+      </div>
       </div>
   
   )

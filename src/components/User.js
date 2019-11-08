@@ -3,9 +3,12 @@ import React from 'react'
 export default function (props) {
     
     return  (
-        <div>
-                <h1>Login: {props.login}</h1>
+        <div className="user">
+              
                 <img src={props.avatar_url} />
+                <h1>{props.name}</h1>
+                <h2>{props.login}</h2>
+                <p>Follow</p>
         </div>
     )
 
